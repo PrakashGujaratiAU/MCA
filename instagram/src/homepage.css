@@ -1,0 +1,21 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /*background-color: rgb(228, 228, 228);    */
+  }
+  
+.flex-container > div {
+    /* background-color: #ffffff; */
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 30px;    
+}
+
+
+.flex-container-post {
+  display: flex;
+  flex-wrap: wrap;
+  /*background-color: rgb(228, 228, 228);    */
+}
