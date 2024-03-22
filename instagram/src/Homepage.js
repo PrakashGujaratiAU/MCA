@@ -44,12 +44,12 @@ function Homepage(props) {
             },
             {
                 "title":"Followings",
-                "numeric":"20",
+                "numeric":"2",
                 "border":true
             },
             {
                 "title":"Followers",
-                "numeric":"33",
+                "numeric":"3",
                 "border":false
             }
         ]
@@ -191,6 +191,7 @@ function Homepage(props) {
 
         <h1 style={{"padding":"0px","margin":"0px"}}>Feeds</h1>
         <div className="flex-container-post">
+            <Post />
             <Post />
             <Post />
         </div>
