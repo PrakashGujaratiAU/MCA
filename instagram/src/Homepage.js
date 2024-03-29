@@ -15,82 +15,117 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 function Homepage(props) {
 
-    const [statsdata, setStatsData] = useState([
-        {
-            "title":"Posts",
-            "numeric":"472",
-            "border":true
-        },
-        {
-            "title":"Posts",
-            "numeric":"472",
-            "border":true
-        },
-        {
-            "title":"Posts",
-            "numeric":"472",
-            "border":false
-        }
-    ]);
+    // const [statsdata, setStatsData] = useState([
+    //     {
+    //         "title":"Posts",
+    //         "numeric":"472",
+    //         "border":true
+    //     },
+    //     {
+    //         "title":"Posts",
+    //         "numeric":"472",
+    //         "border":true
+    //     },
+    //     {
+    //         "title":"Posts",
+    //         "numeric":"472",
+    //         "border":false
+    //     }
+    // ]);
 
-    useEffect(() => {
-        //Runs on every render
-        //console.log("Jay Khunt - MCA")
-        const statApidata = [
+    // useEffect(() => {
+    //     //Runs on every render
+    //     //console.log("Jay Khunt - MCA")
+    //     const statApidata = [
+    //         {
+    //             "title":"Posts",
+    //             "numeric":"1",
+    //             "border":true
+    //         },
+    //         {
+    //             "title":"Followings",
+    //             "numeric":"20",
+    //             "border":true
+    //         },
+    //         {
+    //             "title":"Followers",
+    //             "numeric":"33",
+    //             "border":false
+    //         }
+    //     ]
+    //     setStatsData(statApidata)
+    //   }, []);
+
+
+    const [statsdata, setStatsdata] = useState([])
+
+    useEffect(()=>{
+        const statdataapi = [
             {
                 "title":"Posts",
-                "numeric":"1",
-                "border":true
-            },
-            {
-                "title":"Followings",
-                "numeric":"2",
+                "numeric":"100",
                 "border":true
             },
             {
                 "title":"Followers",
-                "numeric":"3",
+                "numeric":"200",
+                "border":true
+            },
+            {
+                "title":"Following",
+                "numeric":"3333",
                 "border":false
             }
-        ]
-        setStatsData(statApidata)
-      }, []);
+        ];
+        setStatsdata(statdataapi)
+    },[])
 
+    // const statsdata = [
+    //     {
+    //         "title":"Posts",
+    //         "numeric":"1",
+    //         "border":true
+    //     },
+    //     {
+    //         "title":"Posts",
+    //         "numeric":"2",
+    //         "border":true
+    //     },
+    //     {
+    //         "title":"Posts",
+    //         "numeric":"3",
+    //         "border":false
+    //     }
+    // ]
 
-
-
-    /*const statsdata = [
-        {
-            "title":"Posts",
-            "numeric":"472",
-            "border":true
-        },
-        {
-            "title":"Posts",
-            "numeric":"472",
-            "border":true
-        },
-        {
-            "title":"Posts",
-            "numeric":"472",
-            "border":false
-        }
-    ]*/
-
-    const hobbies = [
+    const [hobbies, setHobbies] = useState([
         {
             "title":"UI Designer",
             "border":true
         },
         {
-            "title":"Full Stack Developer",            
+            "title":"Frontend Developer",            
             "border":true
         },
         {
             "title":"Professor",            
             "border":false
         }
-    ]
+    ]);
+    // const hobbies = [
+    //     {
+    //         "title":"UI Designer",
+    //         "border":true
+    //     },
+    //     {
+    //         "title":"Frontend Developer",            
+    //         "border":true
+    //     },
+    //     {
+    //         "title":"Professor",            
+    //         "border":false
+    //     }
+    // ]
 
     const highlightsdata = [
         {
@@ -191,7 +226,6 @@ function Homepage(props) {
 
         <h1 style={{"padding":"0px","margin":"0px"}}>Feeds</h1>
         <div className="flex-container-post">
-            <Post />
             <Post />
             <Post />
         </div>
